@@ -1,0 +1,34 @@
+[
+  {
+    "config_name": "ean_matcher",
+    "generator_snippet": "DEFINE ATTRIBUTE SET target_ean_attr AS\nean,upc,isbn\nDEFINE RULE SET ean_match_rules AS\nean_rule\nDEFINE RULE ean_rule AS\nID MATCH eanno WITH ATTRIBUTE SET target_ean_attr USING THRESHOLD 1.0\n"
+  },
+  {
+    "config_name": "titleval_matcher",
+    "generator_snippet": "DEFINE ATTRIBUTE SET source_item_name_attr AS\nitem_name\nDEFINE RULE SET t2s_titleval_match_rules AS\nt2s_titleval_match_rule\nDEFINE RULE t2s_titleval_match_rule AS\nID1 MATCH titleval WITH ATTRIBUTE SET source_item_name_attr USING THRESHOLD 0.3\n"
+  },
+  {
+    "config_name": "brand_matcher",
+    "generator_snippet": "DEFINE ATTRIBUTE SET target_brand_attr AS\nbrandval,titleval\nDEFINE RULE SET brand_match_rules AS\nbrand_match_rule\nDEFINE RULE brand_match_rule AS\nID MATCH brand OR manufacturer OR brand_name WITH ATTRIBUTE SET target_brand_attr USING THRESHOLD 1.0\n"
+  },
+  {
+    "config_name": "s2t_model_matcher",
+    "generator_snippet": "DEFINE ATTRIBUTE SET target_model_attr AS\nmodelno\n\nDEFINE RULE SET s2t_model_match_rules AS\nsource_to_target_model_match_rules\n\nDEFINE RULE source_to_target_model_match_rules AS\nID1 MATCH model OR matching_part_number OR part_number OR model_number WITH ATTRIBUTE SET target_model_attr USING THRESHOLD 1.0\n"
+  },
+  {
+    "config_name": "color_matcher",
+    "generator_snippet": "DEFINE ATTRIBUTE SET target_color_attr AS\ncolorval\n\nDEFINE RULE SET color_match_rules AS\ncolor_rules\n\nDEFINE RULE color_rules AS\nID MATCH color OR color_keyword WITH ATTRIBUTE SET target_color_attr USING THRESHOLD 1.0\n"
+  },
+  {
+    "config_name": "size_matcher",
+    "generator_snippet": "DEFINE ATTRIBUTE SET target_size_attr AS\nt_size\n\nDEFINE RULE SET size_match_rules AS\nsize_rule\n\nDEFINE RULE size_rule AS\nID MATCH deprecated_clothing_size OR size_map OR size WITH ATTRIBUTE SET target_size_attr USING THRESHOLD 1.0\n"
+  },
+  {
+    "config_name": "s2t_gender_matcher",
+    "generator_snippet": "DEFINE ATTRIBUTE SET target_gender_attr AS\ngenderval\n  \nDEFINE RULE SET s2t_gender_match_rules AS\ns2t_gender_match_rule\n  \nDEFINE RULE s2t_gender_match_rule AS\nID MATCH department OR department1 OR department2 WITH ATTRIBUTE SET target_gender_attr USING THRESHOLD 1.0\n"
+  },
+  {
+    "config_name": "t2s_gender_matcher",
+    "generator_snippet": "DEFINE ATTRIBUTE SET source_attr1 AS\ndepartment,department1,department2\n  \nDEFINE RULE SET t2s_gender_match_rules AS\nt2s_gender_match_rule\n  \nDEFINE RULE t2s_gender_match_rule AS\nID MATCH gender WITH ATTRIBUTE SET source_attr1 USING THRESHOLD 1.0\n"
+  }
+]

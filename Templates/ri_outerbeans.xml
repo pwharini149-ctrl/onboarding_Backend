@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.1.xsd">
+	<import resource="../beans.xml" /> 
+	
+	<alias alias="itemDataRetrieverServiceLocal" name="cachedRCatItemDataRetrieverService"/>
+	
+<bean id="flavorMatcher" factory-bean="flavorMatcherEntity" factory-method="getMatcher" />
+<bean id="flavorMatcherEntity" class="amazon.cmt.robocop.entities.MatcherEntity">
+        <constructor-arg name="attribute" value="FLAVOR"/>
+        <constructor-arg name="config" ref="defaultMatcherConfig" />
+</bean>
+
+<bean id="defaultMatcherConfig" class="amazon.cmt.robocop.matchers.configs.MatcherConfig"
+        factory-method="getNewConfig">
+        <property name="type" value="DEFAULT" />
+        <property name="integrationMode" value="REGULAR" />
+        <property name="threshold" ref="threshold" />
+</bean> 
+
+<bean id="threshold" class="amazon.cmt.robocop.matchers.configs.MatcherConfig.Threshold">
+        <constructor-arg name="lower" value="1.0"/>
+        <constructor-arg name="upper" value="1.0"/>
+</bean>
+<bean id="flavorMatcherName" factory-bean="flavorMatcher" factory-method="getName" />
+		
+</beans>

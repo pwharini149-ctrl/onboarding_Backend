@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+    xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.0.xsd">
+    <!-- Include global beans declaration file -->
+    <import resource="../beans.xml" />
+    <!-- UTIL_LIST_BLOCK -->
+    <!-- GENERATOR_BLOCK -->
+
+    <util:list id="matchers" list-class="java.util.ArrayList">
+		<ref bean="content_matcher" />
+	</util:list>
+
+    <bean id="content_matcher" class="amazon.cmt.robocop.matchers.GalapagosMatcher"
+		lazy-init="true">
+		<constructor-arg
+			type="com.amazon.darwin.galapagos.evaluator.IRuleSetEvaluator">
+			<ref bean="sourceToTargetRuleSetEvaluator" />
+		</constructor-arg>
+		<constructor-arg type="java.lang.String">
+			<value type="java.lang.String">content_match_rule</value>
+		</constructor-arg>
+	</bean>
+</beans>

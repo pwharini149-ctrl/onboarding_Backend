@@ -1,0 +1,42 @@
+[
+  {
+    "config_name": "shingleTitleQueryConfig",
+    "generator_snippet": "<bean name=\"shingleTitleQueryConfig\" class=\"amazon.cmt.afm.querygenerator.QueryConfig\"><constructor-arg><ref bean=\"shingleTitleQueryGenerator\" /></constructor-arg><constructor-arg><ref bean=\"defaultQueryRenderer\" /></constructor-arg></bean><bean name=\"shingleTitleQueryGenerator\" class=\"amazon.cmt.afm.querygenerator.ShingleQueryGenerator\"><constructor-arg type=\"java.lang.String\"><value>item_name</value></constructor-arg><constructor-arg type=\"int\"><value>5</value></constructor-arg><constructor-arg type=\"int\"><value>1</value></constructor-arg></bean>"
+  },
+  {
+    "config_name": "simpleTitleQueryConfig",
+    "generator_snippet": "<bean name=\"simpleTitleQueryConfig\" class=\"amazon.cmt.afm.querygenerator.QueryConfig\"><constructor-arg><ref bean=\"simpleTitleQueryGenerator\" /></constructor-arg><constructor-arg><ref bean=\"defaultQueryRenderer\" /></constructor-arg></bean><bean name=\"simpleTitleQueryGenerator\" class=\"amazon.cmt.afm.querygenerator.SimpleQueryGenerator\"><constructor-arg type=\"java.lang.String\"><value>item_name</value></constructor-arg></bean>"
+  },
+  {
+    "config_name": "shingleeanQueryConfig",
+    "generator_snippet": "<bean name=\"shingleeanQueryConfig\" class=\"amazon.cmt.afm.querygenerator.QueryConfig\"><constructor-arg><ref bean=\"shingleeanQueryGenerator\" /></constructor-arg><constructor-arg><ref bean=\"defaultQueryRenderer\" /></constructor-arg></bean><bean name=\"shingleeanQueryGenerator\" class=\"amazon.cmt.afm.querygenerator.ShingleQueryGenerator\"><constructor-arg type=\"java.lang.String\"><value>ean</value></constructor-arg><constructor-arg type=\"int\"><value>1</value></constructor-arg><constructor-arg type=\"int\"><value>5</value></constructor-arg></bean>"
+  },
+  {
+    "config_name": "shingleupcQueryConfig",
+    "generator_snippet": "<bean name=\"shingleupcQueryConfig\" class=\"amazon.cmt.afm.querygenerator.QueryConfig\"><constructor-arg><ref bean=\"shingleupcQueryGenerator\" /></constructor-arg><constructor-arg><ref bean=\"defaultQueryRenderer\" /></constructor-arg></bean><bean name=\"shingleupcQueryGenerator\" class=\"amazon.cmt.afm.querygenerator.ShingleQueryGenerator\"><constructor-arg type=\"java.lang.String\"><value>upc</value></constructor-arg><constructor-arg type=\"int\"><value>1</value></constructor-arg><constructor-arg type=\"int\"><value>3</value></constructor-arg></bean>"
+  },
+  {
+    "config_name": "modelQueryConfig",
+    "generator_snippet": "<bean name=\"modelQueryConfig\" class=\"amazon.cmt.afm.querygenerator.QueryConfig\"><constructor-arg><ref bean=\"modelQueryGenerator\" /></constructor-arg><constructor-arg><ref bean=\"defaultQueryRenderer\" /></constructor-arg></bean><bean name=\"modelQueryGenerator\" class=\"amazon.cmt.afm.querygenerator.SimpleQueryGenerator\"><constructor-arg type=\"java.lang.String\"><value>model_number</value></constructor-arg></bean>"
+  },
+  {
+    "config_name": "pnQueryConfig",
+    "generator_snippet": "<bean name=\"pnQueryConfig1\" class=\"amazon.cmt.afm.querygenerator.QueryConfig\"><constructor-arg><ref bean=\"pnQueryGenerator1\" /></constructor-arg><constructor-arg><ref bean=\"defaultQueryRenderer\" /></constructor-arg></bean><bean name=\"pnQueryGenerator1\" class=\"amazon.cmt.afm.querygenerator.SimpleQueryGenerator\"><constructor-arg type=\"java.lang.String\"><value>part_number</value></constructor-arg></bean>"
+  },
+  {
+    "config_name": "mpnQueryConfig",
+    "generator_snippet": "<bean name=\"mpnQueryConfig2\" class=\"amazon.cmt.afm.querygenerator.QueryConfig\"><constructor-arg><ref bean=\"mpnQueryGenerator2\" /></constructor-arg><constructor-arg><ref bean=\"defaultQueryRenderer\" /></constructor-arg></bean><bean name=\"mpnQueryGenerator2\" class=\"amazon.cmt.afm.querygenerator.SimpleQueryGenerator\"><constructor-arg type=\"java.lang.String\"><value>matching_part_number</value></constructor-arg></bean>"
+  },
+  {
+    "config_name": "shinglecnQueryConfig",
+    "generator_snippet": "<bean name=\"shinglecnQueryConfig\" class=\"amazon.cmt.afm.querygenerator.QueryConfig\"><constructor-arg><ref bean=\"shinglecnQueryGenerator\" /></constructor-arg><constructor-arg><ref bean=\"defaultQueryRenderer\" /></constructor-arg></bean><bean name=\"shinglecnQueryGenerator\" class=\"amazon.cmt.afm.querygenerator.ShingleQueryGenerator\"><constructor-arg type=\"java.lang.String\"><value>catalog_number</value></constructor-arg><constructor-arg type=\"int\"><value>1</value></constructor-arg><constructor-arg type=\"int\"><value>4</value></constructor-arg></bean>"
+  },
+  {
+    "config_name": "modelnameQueryConfig",
+    "generator_snippet": "<bean name=\"modelnameQueryConfig\" class=\"amazon.cmt.afm.querygenerator.QueryConfig\"><constructor-arg><ref bean=\"modelnameQueryGenerator\" /></constructor-arg><constructor-arg><ref bean=\"defaultQueryRenderer\" /></constructor-arg></bean><bean name=\"modelnameQueryGenerator\" class=\"amazon.cmt.afm.querygenerator.SimpleQueryGenerator\"><constructor-arg type=\"java.lang.String\"><value>model_name</value></constructor-arg></bean>"
+  },
+  {
+    "config_name": "brandQueryConfig",
+    "generator_snippet": "<bean name=\"brandQueryConfig\" class=\"amazon.cmt.afm.querygenerator.QueryConfig\"><constructor-arg><ref bean=\"brandQueryGenerator\" /></constructor-arg><constructor-arg><ref bean=\"defaultQueryRenderer\" /></constructor-arg></bean><bean name=\"brandQueryGenerator\" class=\"amazon.cmt.afm.querygenerator.SimpleQueryGenerator\"><constructor-arg type=\"java.lang.String\"><value>brand</value></constructor-arg></bean>"
+  }
+]

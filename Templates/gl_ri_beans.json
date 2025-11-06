@@ -1,0 +1,46 @@
+[
+  {
+    "config_name": "ean_matcher",
+    "generator_snippet": "<bean id=\"ean_matcher\" class=\"amazon.cmt.robocop.matchers.GalapagosMatcher\" lazy-init=\"true\"><constructor-arg type=\"com.amazon.darwin.galapagos.evaluator.IRuleSetEvaluator\"><ref bean=\"targetToSourceRuleSetEvaluator\" /></constructor-arg><constructor-arg type=\"java.lang.String\"><value type=\"java.lang.String\">ean_match_rules</value></constructor-arg></bean>"
+  },
+  {
+    "config_name": "titleval_matcher",
+    "generator_snippet": "<bean id=\"titleval_matcher\" class=\"amazon.cmt.robocop.matchers.GalapagosMatcher\" lazy-init=\"true\"><constructor-arg type=\"com.amazon.darwin.galapagos.evaluator.IRuleSetEvaluator\"><ref bean=\"targetToSourceRuleSetEvaluator\" /></constructor-arg><constructor-arg type=\"java.lang.String\"><value type=\"java.lang.String\">t2s_titleval_match_rules</value></constructor-arg></bean>"
+  },
+  {
+    "config_name": "brand_matcher",
+    "generator_snippet": "<bean id=\"brand_matcher\" class=\"amazon.cmt.robocop.matchers.GalapagosMatcher\" lazy-init=\"true\"><constructor-arg type=\"com.amazon.darwin.galapagos.evaluator.IRuleSetEvaluator\"><ref bean=\"sourceToTargetRuleSetEvaluator\" /></constructor-arg><constructor-arg type=\"java.lang.String\"><value type=\"java.lang.String\">brand_match_rules</value></constructor-arg></bean>"
+  },
+  {
+    "config_name": "s2t_model_matcher",
+    "generator_snippet": "<bean id=\"s2t_model_matcher\" class=\"amazon.cmt.robocop.matchers.GalapagosMatcher\" lazy-init=\"true\"><constructor-arg type=\"com.amazon.darwin.galapagos.evaluator.IRuleSetEvaluator\"><ref bean=\"sourceToTargetRuleSetEvaluator\" /></constructor-arg><constructor-arg type=\"java.lang.String\"><value type=\"java.lang.String\">s2t_model_match_rules</value></constructor-arg></bean>"
+  },
+  {
+    "config_name": "color_matcher",
+    "generator_snippet": "<bean id=\"color_matcher\" class=\"amazon.cmt.robocop.matchers.GalapagosMatcher\" lazy-init=\"true\"><constructor-arg type=\"com.amazon.darwin.galapagos.evaluator.IRuleSetEvaluator\"><ref bean=\"targetToSourceRuleSetEvaluator\" /></constructor-arg><constructor-arg type=\"java.lang.String\"><value type=\"java.lang.String\">color_match_rules</value></constructor-arg></bean>"
+  },
+  {
+    "config_name": "size_matcher",
+    "generator_snippet": "<bean id=\"size_matcher\" class=\"amazon.cmt.robocop.matchers.GalapagosMatcher\" lazy-init=\"true\"><constructor-arg type=\"com.amazon.darwin.galapagos.evaluator.IRuleSetEvaluator\"><ref bean=\"sourceToTargetRuleSetEvaluator\" /></constructor-arg><constructor-arg type=\"java.lang.String\"><value type=\"java.lang.String\">size_match_rules</value></constructor-arg></bean>"
+  },
+  {
+    "config_name": "s2t_gender_matcher",
+    "generator_snippet": "<bean id=\"s2t_gender_matcher\" class=\"amazon.cmt.robocop.matchers.GalapagosMatcher\" lazy-init=\"true\"><constructor-arg type=\"com.amazon.darwin.galapagos.evaluator.IRuleSetEvaluator\"><ref bean=\"sourceToTargetRuleSetEvaluator\" /></constructor-arg><constructor-arg type=\"java.lang.String\"><value type=\"java.lang.String\">s2t_gender_match_rules</value></constructor-arg></bean>"
+  },
+  {
+    "config_name": "t2s_gender_matcher",
+    "generator_snippet": "<bean id=\"t2s_gender_matcher\" class=\"amazon.cmt.robocop.matchers.GalapagosMatcher\" lazy-init=\"true\"><constructor-arg type=\"com.amazon.darwin.galapagos.evaluator.IRuleSetEvaluator\"><ref bean=\"targetToSourceRuleSetEvaluator\" /></constructor-arg><constructor-arg type=\"java.lang.String\"><value type=\"java.lang.String\">t2s_gender_match_rules</value></constructor-arg></bean>"
+  },
+  {
+    "config_name": "ipqMatcher",
+    "generator_snippet": "<bean id=\"ipqMatcher\" class=\"amazon.cmt.robocop.matchers.IPQHierarchyMatcher\" lazy-init=\"true\"><constructor-arg type=\"java.util.List\"><ref bean=\"sourceAttrList\" /></constructor-arg><constructor-arg type=\"java.util.List\"><ref bean=\"targetAttrList\" /></constructor-arg><constructor-arg type=\"java.util.List\"><ref bean=\"varianceList\" /></constructor-arg><constructor-arg type=\"java.lang.Double\" value=\"0.0\"></constructor-arg><constructor-arg type=\"java.util.List\"><ref bean=\"comparisonTypeList\" /></constructor-arg></bean>"
+  },
+  {
+    "config_name": "ipqTextMatcher",
+    "generator_snippet": ""
+  },
+  {
+    "config_name": "product_condition_matcher",
+    "generator_snippet": ""
+  }
+]

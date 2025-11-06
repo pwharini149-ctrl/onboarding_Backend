@@ -1,0 +1,13 @@
+[
+  { "search_key": "Model", "config_name": "modelQueryConfig" },
+  { "search_key": "Brand", "config_name": "brandQueryConfig" },
+  { "search_key": "EAN", "config_name": "shingleeanQueryConfig" },
+  { "search_key": "Model Number", "config_name": "modelQueryConfig1" },
+  { "search_key": "Matching Part Number", "config_name": "modelQueryConfig2" },
+  { "search_key": "Part Number", "config_name": "modelQueryConfig1" },
+  { "search_key": "shingle Title", "config_name": "shingleTitleQueryConfig" },
+  { "search_key" : "Simple Title", "config_name" : "simpleTitleQueryConfig" },
+  { "search_key" : "UPC" , "config_name" : "shingleupcQueryConfig"},
+  {"search_key": "Model Name" , "config_name" : "modelnameQueryConfig"},
+  { "search_key" : "Catalog Number" , "config_name" :"shinglecnQueryConfig"}
+]

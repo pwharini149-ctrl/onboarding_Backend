@@ -1,0 +1,13 @@
+[
+  { "match_key": "Model", "config_name": "s2t_model_matcher" },
+  { "match_key": "Brand", "config_name": "brand_matcher" },
+  { "match_key": "EAN", "config_name": "ean_matcher" },
+  { "match_key": "Title", "config_name": "title_matcher" },
+  { "match_key": "Color", "config_name": "color_matcher" },
+  { "match_key": "Size", "config_name": "size_matcher" },
+  { "match_key": "Gender (T2S)", "config_name": "t2s_gender_matcher" },
+  { "match_key" : "Gender (S2T)", "config_name" : "s2t_gender_matcher" },
+  { "match_key": "IPQ Matcher", "config_name": "ipqMatcher " },
+  { "match_key": "IPQ TextMatcher", "config_name": "ipqTextMatcher " },
+  { "match_key": "Product Condition Matcher", "config_name": "product_condition_matcher " }
+]

@@ -1,0 +1,13 @@
+[
+  { "search_key": "Model", "config_name": "modelno" },
+  { "search_key": "Brand", "config_name": "brandval" },
+  { "search_key": "EAN", "config_name": "eanno" },
+  { "search_key": "Model Number", "config_name": "modelno" },
+  { "search_key": "Matching Part Number", "config_name": "partno" },
+  { "search_key": "Part Number", "config_name": "partno" },
+  { "search_key": "shingle Title", "config_name": "titleval" },
+  { "search_key" : "Simple Title", "config_name" : "titleval" },
+  { "search_key" : "UPC" , "config_name" : "upc"},
+  {"search_key": "Model Name" , "config_name" : "modelname"},
+  { "search_key" : "Catalog Number" , "config_name" :"catalog1"}
+]
